@@ -16,7 +16,7 @@ var app = express();
 app.use(helmet());
 
 // Database
-var mongoDB = 'mongodb://127.0.0.1/my_database';
+var mongoDB = process.env.MONGODB_URI;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
