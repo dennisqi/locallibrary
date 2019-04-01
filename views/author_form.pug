@@ -20,11 +20,13 @@ block content
             label(for='date_of_birth') Date of birth:
             input#date_of_birth.form-control(
                 type='date' name='date_of_birth' 
+                placeholder='YYYY-MM-DD' 
                 value=(undefined===author ? '' : author.date_of_birth_update)
             )
             label(for='date_of_death') Date of birth:
             input#date_of_birth.form-control(
                 type='date' name='date_of_death' 
+                placeholder='YYYY-MM-DD' 
                 value=(undefined===author ? '' : author.date_of_death_update)
             )
         button.btn.btn-primary(type='submit') Submit
